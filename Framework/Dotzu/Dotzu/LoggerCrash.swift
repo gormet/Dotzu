@@ -51,8 +51,7 @@ class LoggerCrash: LogGenerator {
         didSet {
             if enable {
                 LoggerCrash.register()
-            }
-            else {
+            } else {
                 LoggerCrash.unregister()
             }
         }

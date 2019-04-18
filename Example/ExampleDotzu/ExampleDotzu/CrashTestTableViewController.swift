@@ -15,13 +15,12 @@ class CrashTestTableViewController: UITableViewController {
     }
 
     private func crashSigbart() {
-        let _ = (view as! UIButton).showsTouchWhenHighlighted
+        _ = (view as! UIButton).showsTouchWhenHighlighted
     }
 
     private func crashExecption() {
         self.delete(nil)
     }
-
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.row {

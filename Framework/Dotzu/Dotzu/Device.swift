@@ -10,23 +10,23 @@ import UIKit
 
 struct Device {
     let deviceModel: DeviceModel = DeviceModel.current
-    
+
     var osVersion: String?
     var screenResolution: String!
     var aspectRatio: String?
     var screenSize: Float = 0.0
-    
+
     init() {
         self.screenResolution = self.deviceScreenResolution()
         self.screenSize = self.deviceScreenSize()
     }
-    
+
     private func deviceScreenResolution() -> String {
         let scale = UIScreen.main.scale
         let dimension = UIScreen.main.bounds
         return "\(dimension.size.width*scale)*\(dimension.size.height*scale)"
     }
-    
+
     private func deviceScreenSize() -> Float {
         switch self.deviceModel {
         case .iPhone4, .iPhone4S:                                               return 3.5
@@ -42,4 +42,3 @@ struct Device {
         }
     }
 }
-

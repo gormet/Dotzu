@@ -12,7 +12,6 @@ class RequestDataHttpBodyTableViewCell: UITableViewCell, LogCellProtocol {
 
     @IBOutlet weak var textview: UITextView!
 
-
     override func awakeFromNib() {
         super.awakeFromNib()
         textview.isUserInteractionEnabled = false
@@ -22,6 +21,6 @@ class RequestDataHttpBodyTableViewCell: UITableViewCell, LogCellProtocol {
     func configure(log: LogProtocol) {
         guard let request = log as? LogRequest else {return}
         guard let data = request.httpBody else {return}
-        textview.text = "\(NSData(data:data).length) bytes"
+        textview.text = "\(NSData(data: data).length) bytes"
     }
 }

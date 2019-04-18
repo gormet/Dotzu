@@ -29,8 +29,7 @@ class LogTestTableViewController: UITableViewController {
                 Logger.error("UUID: \(uuid)")
             default: break
             }
-        }
-        else {
+        } else {
             switch indexPath.row {
             case 0:
                 print("UUID: \(uuid)")

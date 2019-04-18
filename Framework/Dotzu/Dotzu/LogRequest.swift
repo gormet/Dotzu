@@ -62,7 +62,7 @@ class LogRequest: NSObject, NSCoding {
         url = aDecoder.decodeObject(forKey: "url") as? String ?? ""
         method = aDecoder.decodeObject(forKey: "method") as? String ?? ""
         headers = aDecoder.decodeObject(forKey: "headers") as? [String: String]
-        code = aDecoder.decodeInteger(forKey: "code") 
+        code = aDecoder.decodeInteger(forKey: "code")
         date = aDecoder.decodeObject(forKey: "date") as? Date ?? Date()
         dataResponse = aDecoder.decodeObject(forKey: "dataResponse") as? NSData
         errorClientDescription = aDecoder.decodeObject(forKey: "errorClientDescription") as? String

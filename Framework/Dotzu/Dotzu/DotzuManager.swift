@@ -18,8 +18,8 @@ public class Dotzu: NSObject {
 
     func initLogsManager() {
         if LogsSettings.shared.resetLogsStart {
-            let _ = StoreManager<Log>(store: .log).reset()
-            let _ = StoreManager<LogRequest>(store: .network).reset()
+            _ = StoreManager<Log>(store: .log).reset()
+            _ = StoreManager<LogRequest>(store: .network).reset()
         }
     }
 

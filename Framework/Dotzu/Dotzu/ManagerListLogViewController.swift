@@ -90,15 +90,15 @@ class ManagerListLogViewController: UIViewController {
 
         let sendLogsButton = UIAlertAction(title: "Email logs",
                                            style: .default,
-                                           handler: { [weak self] (action) in self?.emailLogs() })
+                                           handler: { [weak self] (_) in self?.emailLogs() })
         alertController.addAction(sendLogsButton)
 
         let resetLogsButton = UIAlertAction(title: "Reset logs & network",
                                             style: .destructive,
-                                            handler: { [weak self] (action) in self?.resetLogs() })
+                                            handler: { [weak self] (_) in self?.resetLogs() })
         alertController.addAction(resetLogsButton)
 
-        let cancelButton = UIAlertAction(title: "Cancel", style: .cancel, handler:nil)
+        let cancelButton = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         alertController.addAction(cancelButton)
 
         self.navigationController?.present(alertController, animated: true, completion: nil)
@@ -110,7 +110,7 @@ class ManagerListLogViewController: UIViewController {
         if MFMailComposeViewController.canSendMail() {
 
             let mail = MFMailComposeViewController()
-            mail.mailComposeDelegate = self;
+            mail.mailComposeDelegate = self
             let appName = Bundle.main.infoDictionary?[kCFBundleNameKey as String] as? String
             mail.setSubject("\(appName ?? "App") Log")
 

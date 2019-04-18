@@ -26,7 +26,7 @@ class RequestTestTableViewController: UITableViewController {
     private func makePostRequest(url: String, data: String? = nil) {
         guard let url = URL(string: url) else {return}
         let request = NSMutableURLRequest(url: url)
-        let parameters = ["username":"remi"]
+        let parameters = ["username": "remi"]
         var data: Data?
         do {
             data = try JSONSerialization.data(withJSONObject: parameters, options: JSONSerialization.WritingOptions.prettyPrinted)

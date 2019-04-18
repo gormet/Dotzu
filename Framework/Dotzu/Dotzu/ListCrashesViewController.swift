@@ -15,7 +15,7 @@ class ListCrashesViewController: UIViewController {
     let datasource = ListLogDataSource<LogCrash>()
 
     @objc func deleteCrashes() {
-        let _ = StoreManager<LogCrash>(store: .crash).reset()
+        _ = StoreManager<LogCrash>(store: .crash).reset()
         datasource.reset()
         datasource.reloadData()
         tableview.reloadData()
